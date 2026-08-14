@@ -87,6 +87,11 @@ defmodule Scry.Engine.Elasticsearch.QueryDsl do
   @typedoc "A compiled request: the JSON-ready body map, and `query` with `relevance()` already rewritten for `Scry.Core.QueryOps.run_flat/3`."
   @type compiled :: %{body: map(), query: Query.t()}
 
+  @doc """
+  Compiles `query` into a real Elasticsearch Query DSL request body,
+  all-or-nothing -- this module's own moduledoc has the complete "what
+  compiles" reasoning.
+  """
   @spec compile(Query.t()) :: {:ok, compiled()} | {:error, {:unsupported, term()}}
   def compile(%Query{} = query) do
     with :ok <- check(query.havings == [], {:construct, :having}),
