@@ -8,7 +8,7 @@ defmodule Scry.Engine.Elasticsearch.Conn do
   `Finch`, is managed transparently underneath every individual
   request instead). `open/1` still exists, and still returns `{:ok,
   t()}`, purely to match the connection/config-struct shape every real
-  adapter in this ecosystem exposes (impl_spec.md §2) -- a caller
+  adapter in this ecosystem exposes -- a caller
   writing generic code against multiple engines shouldn't need to know
   which ones happen to need real setup and which don't.
   """

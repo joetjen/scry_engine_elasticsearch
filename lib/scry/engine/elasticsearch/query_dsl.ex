@@ -12,7 +12,7 @@ defmodule Scry.Engine.Elasticsearch.QueryDsl do
   ## What compiles
 
   - `wheres`: every leaf must be `{:variant, {:search, left, needle}}`
-    (lang_spec.md §8.5's own `<field> SEARCH <string>`, `left` a bare
+    (the `<field> SEARCH <string>` form, `left` a bare
     field path -- `Scry.Search.Executor`'s own scope limit on the
     reference implementation this package replaces, kept here too) --
     a real `{:cmp, ...}`/`{:in, ...}` ordinary predicate leaf declines
@@ -72,7 +72,7 @@ defmodule Scry.Engine.Elasticsearch.QueryDsl do
   own weak typing was found to need real guarding against, this
   package declines every construct that would need it -- `SEARCH`/
   `relevance()` (this package's own actual reason to exist, per
-  impl_spec.md §6's own roadmap entry: "needs direct validation, not
+  its own roadmap entry: "needs direct validation, not
   just a RedisSearch stand-in") never depend on it in the first place,
   since a `match` query's own "no match" case is already the correct,
   intended behavior for an absent field, not a null-safety violation.

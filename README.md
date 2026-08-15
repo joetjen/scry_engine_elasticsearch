@@ -7,14 +7,12 @@ reference implementation (`Scry.Search.Executor` -- a toy token-overlap
 relevance scorer, explicitly documented there as "proving the language
 construct executes, not an integration with any real search engine")
 with genuine `SEARCH`/`relevance()` execution against a real full-text
-search engine. Closes the validation impl_spec.md §6's own roadmap
-already calls for: Elasticsearch is `search`'s own namesake reference
-language (lang_spec.md §11), needing direct validation, "not just a
-RedisSearch stand-in."
+search engine. Closes the validation the roadmap already calls for:
+Elasticsearch is `search`'s own namesake reference language, needing
+direct validation, "not just a RedisSearch stand-in."
 
-Source: <https://github.com/joetjen/scry_engine_elasticsearch>. Specs
-live in the separate [`scry`](https://github.com/joetjen/scry)
-repository; the behaviour this implements lives in
+Source: <https://github.com/joetjen/scry_engine_elasticsearch>. The
+behaviour this implements lives in
 [`scry_core`](https://github.com/joetjen/scry_core).
 
 ## Usage

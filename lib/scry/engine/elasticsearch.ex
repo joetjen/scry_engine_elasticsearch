@@ -7,10 +7,9 @@ defmodule Scry.Engine.Elasticsearch do
   as "proving the language construct executes, not an integration
   with any real search engine") with genuine `SEARCH`/`relevance()`
   execution against a real full-text search engine. Closes the
-  validation impl_spec.md §6's own roadmap already calls for:
-  Elasticsearch is `search`'s own namesake reference language
-  (lang_spec.md §11), needing direct validation, "not just a
-  RedisSearch stand-in."
+  validation the roadmap already calls for: Elasticsearch is
+  `search`'s own namesake reference language, needing direct
+  validation, "not just a RedisSearch stand-in."
 
   Like `scry_logic`/`Scry.Logic.Executor` (replaced by
   `scry_engine_episteme`) and unlike every SQL-engine adapter in this
